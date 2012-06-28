@@ -152,7 +152,6 @@ def main():
     # Start Tornado
     try:
         io_loop.start()
-        logging.log("Snoop started.")
     except KeyboardInterrupt:
         io_loop.stop()
         print "Snoop stopped."
