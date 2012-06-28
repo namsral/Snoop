@@ -11,12 +11,20 @@ Usage
 
 Make sure you have enabled WiFi Sync in your mobile iOS device. And you'll need to run snoop with root privileges as it needs to bind to the network interface and capture incoming traffic.
 
+The following command will notify you of present devices in the console:
+
+    $ sudo snoop \
+        --targets="<MAC>,<MAC>" \
+        --interface="eth0" \
+
+To use Snoop with other applications you can specify a callback URL:
+
     $ sudo snoop \
         --targets="<MAC>,<MAC>" \
         --interface="eth0" \
         --callback_url="http://example.com/api/devices"
 
-Whenever a device is spotted on the network a POST request will be made to the callback URL containing the a current UTC datestring and the device's MAC address:
+Using the callback option will make a POST request the supplied url cotaining the device's MAC address and a UTC datesting of when the device was present:
 
     mac_addres="00:00:00:00:00:00", date="2012-06-28T14:59:44Z"
 
@@ -75,7 +83,7 @@ FAQ
 ---
 
 Q: Does it work on Windows, OSX or BSD?  
-A: No, the daemon was written to work on the Linux packet filter system.
+A: No, the daemon was written to work with the Linux packet filter system.
 
 Q: Won't this WoL technique drain my mobile iOS battery?  
 A: If you keep a reasonable WoL interval of 300 seconds it shouldn't pose a problem since iOS itself frequently wakes up to talk to Apple's server.
