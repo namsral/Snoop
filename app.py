@@ -99,7 +99,7 @@ def handle_packet(sock, fd, events):
 
 
 def main():
-    global INTERFACE, TARGETS, INTERVAL, CALLBACK, io_loop
+    global INTERFACE, TARGETS, INTERVAL, CALLBACK
 
     # Register command line options
     options.define('config', default='/etc/torpedo/torpedo.conf', help='Path to config file')
