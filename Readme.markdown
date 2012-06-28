@@ -11,13 +11,13 @@ Usage
 
 Make sure you have enabled WiFi Sync in your mobile iOS device. And you'll need to run snoop with root privileges as it needs to bind to the network interface and capture incoming traffic.
 
-The following command will notify you of present devices in the console:
+Pass your iOS's MAC address to Snoop and it will notify you in the console when the device is found present:
 
     $ sudo snoop \
         --targets="<MAC>,<MAC>" \
-        --interface="eth0" \
+        --interface="eth0"
 
-To use Snoop with other applications you can specify a callback URL:
+To use Snoop with other applications you could specify a callback URL:
 
     $ sudo snoop \
         --targets="<MAC>,<MAC>" \
