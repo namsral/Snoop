@@ -20,10 +20,11 @@ Whenever a device is spotted on the network a POST request will be made to the c
 
     mac_addres="00:00:00:00:00:00", date="2012-06-28T14:59:44Z"
 
+
 Installation
 ------------
 
-  $ pip install tornado
+    $ pip install tornado
     $ python setup.py install
 
 
@@ -91,4 +92,4 @@ Snoop is licensed under the terms of the MIT license, see attached LICENSE file 
 
 [0]: http://en.wikipedia.org/wiki/Sleep_Proxy_Service "Bonjour Sleep Proxy on Wikipedia"
 [1]: http://tornadoweb.org "Tornado"
-[2]: http://www.opensource.org/licenses/MIT ""
+[2]: http://www.opensource.org/licenses/MIT "MIT License Details"
