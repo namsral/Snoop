@@ -9,15 +9,16 @@ One use case for this software is as a complimentary service to track the presen
 Usage
 -------
 
-Make sure you have enabled WiFi Sync in your mobile iOS device.
+Make sure you have enabled WiFi Sync in your mobile iOS device. And you'll need to run snoop with root privileges as it needs to bind to the network interface and capture incoming traffic.
 
     $ sudo snoop \
         --targets="<MAC>,<MAC>" \
         --interface="eth0" \
-        --callback="http://example.com/api/devices"
+        --callback_url="http://example.com/api/devices"
 
-You'll need to run snoop with root privileges as it needs to bind to the network interface and capture incoming traffic.
+Whenever a device is spotted on the network a POST request will be made to the callback URL containing the a current UTC datestring and the device's MAC address:
 
+    mac_addres="00:00:00:00:00:00", date="2012-06-28T14:59:44Z"
 
 Installation
 ------------
