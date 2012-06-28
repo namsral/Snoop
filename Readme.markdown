@@ -24,7 +24,7 @@ To use Snoop with other applications you can specify a callback URL:
         --interface="eth0" \
         --callback_url="http://example.com/api/devices"
 
-Using the callback option will make a POST request the supplied url cotaining the device's MAC address and a UTC datesting of when the device was present:
+This will make snoop make a POST request to the supplied callback URL when a device was present. The POST request will contain the MAC address and a UTC datestring:
 
     mac_addres="00:00:00:00:00:00", date="2012-06-28T14:59:44Z"
 
