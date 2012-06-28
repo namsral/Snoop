@@ -74,13 +74,13 @@ Tested With
 FAQ
 ---
 
-Q: Does it work on Windows, OSX or BSD?
+Q: Does it work on Windows, OSX or BSD?  
 A: No, the daemon was written to work on the Linux packet filter system.
 
-Q: Won't this WoL technique drain my mobile iOS battery?
+Q: Won't this WoL technique drain my mobile iOS battery?  
 A: If you keep a reasonable WoL interval of 300 seconds it shouldn't pose a problem since iOS itself frequently wakes up to talk to Apple's server.
 
-Q: Does this work with other phones, Android based?
+Q: Does this work with other phones, Android based?  
 A: No, but a tracking daemon should be a lot easier to implement for Android devices.
 
 
