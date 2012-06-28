@@ -122,7 +122,6 @@ def main():
     targets = []
     if options.options.targets:
         s = options.options.targets
-        # targets = [i.strip() for i in s.split(',')]
         targets = [i.strip() for i in s.split(',')]
     
     # Make options global
@@ -147,7 +146,7 @@ def main():
         scheduler = ioloop.PeriodicCallback(callback, INTERVAL, io_loop=io_loop)
         scheduler.start()
     except socket.error, e:
-        print "Error: No permission to bind to the network interface.\n\n"
+        print "Error: Could not bind to the network interface, no permission perhaps?\n\n"
         sys.exit(1)
 
     # Start Tornado
